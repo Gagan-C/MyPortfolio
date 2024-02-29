@@ -10,18 +10,18 @@ function NavigationBar() {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand href="#home">Portfolio</Navbar.Brand>
+          <Navbar.Brand href="/">Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/GitHubPages_test.github.io/">Home</Nav.Link>
-              <Nav.Link href="/GitHubPages_test.github.io/skills">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/#/skills">
                 Skills
               </Nav.Link>
-              <Nav.Link href="/GitHubPages_test.github.io/education">
+              <Nav.Link href="/#/education">
                 Education
               </Nav.Link>
-              <Nav.Link href="/GitHubPages_test.github.io/projects">
+              <Nav.Link href="/#/projects">
                 Projects
               </Nav.Link>
             </Nav>
