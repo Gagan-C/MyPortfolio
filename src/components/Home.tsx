@@ -43,7 +43,7 @@ function Home() {
               <p className="text-sm flex flex-row pl-2">e-mail</p>
             </Link>
             <Link
-              to={"#"}
+              to={"https://discord.gg/S8UwfCN4Md"}
               className="flex flex-row pl-2"
               target="_blank"
             >
