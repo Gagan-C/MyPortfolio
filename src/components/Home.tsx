@@ -21,6 +21,7 @@ function Home() {
             <Link
               to={"https://github.com/Gagan-C"}
               className="flex flex-row pl-2"
+              target="_blank"
             >
               <FaGithub size={20} />
               <p className="text-sm flex flex-row pl-2">Github</p>
@@ -28,6 +29,7 @@ function Home() {
             <Link
               to={"https://www.linkedin.com/in/gaganchowdarychatu/"}
               className="flex flex-row pl-2"
+              target="_blank"
             >
               <FaLinkedin size={20} />
               <p className="text-sm flex flex-row pl-2">Linkedin</p>
@@ -42,6 +44,7 @@ function Home() {
             <Link
               to={"#"}
               className="flex flex-row pl-2"
+              target="_blank"
             >
               <FaDiscord size={20} />
               <p className="text-sm flex flex-row pl-2">Discord</p>
