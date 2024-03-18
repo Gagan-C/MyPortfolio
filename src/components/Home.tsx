@@ -37,6 +37,7 @@ function Home() {
             <Link
               to={"mailto:gagan.chatu@gmail.com"}
               className="flex flex-row pl-2"
+              target="_blank"
             >
               <MdEmail size={20} />
               <p className="text-sm flex flex-row pl-2">e-mail</p>
