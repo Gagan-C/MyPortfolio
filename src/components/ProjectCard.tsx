@@ -24,7 +24,7 @@ function ProjectCard({
       <></>
     ) : (
       <Link href={demo} target="_blank">
-        demo
+        Demo
       </Link>
     );
 
