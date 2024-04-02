@@ -38,5 +38,15 @@
     "project-demo": "",
     "project-img": "",
     "project-img-alt": ""
+  },
+  {
+    "name": "Review papers of implementation of trust in IoT using blockchain",
+    "description": "This is a collection of review papers which discuss the understading of trust between IoT devices using blockchain technology",
+    "tools":"Security, Blockchain, IoT, Trust management",
+    "languages": [],
+    "project-link": "https://github.com/Gagan-C/Review_Papers_Blockchain_Security",
+    "project-demo": "",
+    "project-img": "",
+    "project-img-alt": ""
   }
 ]
