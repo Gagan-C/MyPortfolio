@@ -1,0 +1,30 @@
+{
+    "languages": [
+      {
+        "name": "C++",
+        "icon": ""
+      },
+      {
+        "name": "Java",
+        "icon": ""
+      },
+      {
+        "name": "Python",
+        "icon": ""
+      },
+      {
+        "name": "Go",
+        "icon": ""
+      }
+    ],
+    "tools": [
+      { "name": "Docker", "icon": "" },
+      { "name": "Git", "icon": "" }
+    ],
+    "databases": [
+      { "name": "MariDB", "icon": "" },
+      { "name": "MySQL", "icon": "" },
+      { "name": "Oracle 11g", "icon": "" }
+    ]
+  }
+  
