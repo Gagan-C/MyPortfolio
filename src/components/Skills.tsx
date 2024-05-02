@@ -1,4 +1,4 @@
-import {  Box, Card, CardMedia, Chip, Grid, Stack } from "@mui/material";
+import { Card, CardMedia, Chip, Grid, Stack } from "@mui/material";
 import skillsData from "./skill-list.json";
 import proImg from "../assets/programming.jpeg";
 import dbImg from "../assets/db.jpeg";
