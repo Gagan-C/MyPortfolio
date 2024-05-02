@@ -19,12 +19,25 @@
     ],
     "tools": [
       { "name": "Docker", "icon": "" },
-      { "name": "Git", "icon": "" }
+      { "name": "Kubernetes", "icon": "" },
+      { "name": "Postman", "icon": "" },
+      { "name": "Git", "icon": "" },
+      { "name": "SVN", "icon": "" },
+      { "name": "Appian BPM", "icon": "" },
+      { "name": "Appian RPA", "icon": "" }
     ],
     "databases": [
       { "name": "MariDB", "icon": "" },
       { "name": "MySQL", "icon": "" },
       { "name": "Oracle 11g", "icon": "" }
+    ],
+    "frameworks":[
+      {"name":"Spring", "icon":""},
+      {"name":"Spring Boot", "icon":""},
+      {"name":"Flask","icon":""},
+      {"name":"Django","icon":""},
+      {"name":"Pandas","icon":""},
+      {"name":"Qt","icon":""}
     ]
   }
   
