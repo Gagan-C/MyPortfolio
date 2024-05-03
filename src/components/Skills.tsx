@@ -1,53 +1,26 @@
-import { Card, CardMedia, Chip, Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import skillsData from "./skill-list.json";
 import proImg from "../assets/programming.jpeg";
 import dbImg from "../assets/db.jpeg";
 import toolImg from "../assets/tools.jpeg";
 import frameworkImg from "../assets/framework.jpeg"
+import SkillCard from "./SkillCard.tsx";
 
 
 
 function Skills() {
   return <Grid container spacing={4} p={2} rowSpacing={2} columnSpacing={2}>
   <Grid item xs={12} sm={6} md={4} >
-      <Card raised >
-          <CardMedia component="img" sx={{ height: 200 }} image={proImg}></CardMedia>
-          <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap" >
-              {skillsData.languages.map((language) => (
-                  <Chip label={language.name} color="primary" size="small" />
-              ))}
-          </Stack>
-      </Card>
+      <SkillCard image={proImg} list={skillsData.languages.map((language) => language.name)}/>
   </Grid>
   <Grid item xs={12} sm={6} md={4}>
-      <Card raised >
-          <CardMedia component="img" sx={{ height: 200 }} image={dbImg}></CardMedia>
-          <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap" >
-              {skillsData.databases.map((db) => (
-                  <Chip label={db.name} color="primary" size="small" />
-              ))}
-          </Stack>
-      </Card>
+      <SkillCard image={dbImg} list={skillsData.databases.map((db) => db.name)}/>
   </Grid>
   <Grid item xs={12} sm={6} md={4}>
-      <Card raised>
-          <CardMedia component="img" sx={{ height: 200 }} image={toolImg}></CardMedia>
-          <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap"  >
-              {skillsData.tools.map((tool) => (
-                  <Chip  label={tool.name} color="primary" size="small"  />
-              ))}
-          </Stack>
-      </Card>
+      <SkillCard image={toolImg} list={skillsData.tools.map((tool) => tool.name)}/>
   </Grid>
   <Grid item xs={12} sm={6} md={4} >
-      <Card raised >
-          <CardMedia component="img" sx={{ height: 200 }} image={frameworkImg}></CardMedia>
-          <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap" >
-              {skillsData.frameworks.map((framework) => (
-                  <Chip label={framework.name} color="primary" size="small" />
-              ))}
-          </Stack>
-      </Card>
+      <SkillCard image={frameworkImg} list={skillsData.frameworks.map((framework) => framework.name)}/>
   </Grid>
 </Grid>
 }
