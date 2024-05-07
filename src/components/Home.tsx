@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 function Home() {
   const background = {
-    backgroundImage: `url(${Background})`,
-    height: "100vh",
-    width: "100vw",
+    backgroundImage: `url(${Background})`
   };
   return (
-    <div className="bg-cover bg-center" style={background}>
-      <div className="text-white h-screen flex items-center justify-center container mx auto backdrop-blur-sm ">
-        <div className="banner-text text-5xl ">
+    <div className="bg-cover bg-center bg-image" style={background}>
+      <div className="text-white  h-screen flex items-center justify-center  backdrop-blur-sm">
+        <div className="banner-text text-5xl">
           <h1 className="responsive-headline pb-3">I am {"Gagan."}</h1>
           <h3 className="text-xl pb-2">
             I'm a <span>{"Software Developer"}</span> from {"India"}. {"NA"}.
