@@ -1,4 +1,4 @@
-import { Card, Container, Grid, Typography } from "@mui/material";
+import { Card, Container, Grid } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 import { Link } from "react-router-dom";
