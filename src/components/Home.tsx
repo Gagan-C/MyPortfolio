@@ -13,7 +13,7 @@ function Home() {
       <div className="text-white  h-screen flex items-center justify-center  backdrop-blur-sm">
         <div className="banner-text text-5xl items-center justify-center container mx-auto ">
         <Paper elevation={1} className="px-10 py-4">
-          <h1 className="responsive-headline pb-3">I am {"Gagan"}</h1>
+          <h1 className="responsive-headline pb-3">Howdy!! I am {"Gagan Chatu"}</h1>
           
           <h3 className="text-xl pb-2">
             {aboutMe}
