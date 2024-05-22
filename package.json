@@ -2,7 +2,7 @@
   "homepage": "http://gagan-c.github.io/GitHubPages_test.github.io/",
   "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
