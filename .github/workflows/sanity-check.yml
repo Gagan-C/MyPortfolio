@@ -10,8 +10,11 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "The workflow is now ready to test your code on the runner."
+      - run: echo "The ${{ github.ref }} branch is being used for npm."
+      - run: npm ci
+      - run: echo "Instalation of npm packages is complete. ready to run ESLint."
       - name: run ESLint
         run: |
           npm run lint ${{ github.workspace }}
+      - run: echo "ESLint has been run."
       - run: echo "This job's status is ${{ job.status }}."
