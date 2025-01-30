@@ -1,0 +1,17 @@
+name: Run a sanity check
+run-name: ${{ github.actor }} is running sanity check
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "The workflow is now ready to test your code on the runner."
+      - name: run ESLint
+        run: |
+          npm run lint ${{ github.workspace }}
+      - run: echo "This job's status is ${{ job.status }}."
