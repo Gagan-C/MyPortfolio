@@ -9,7 +9,7 @@ import SkillCard from "./SkillCard.tsx";
 
 
 function Skills() {
-  return <Grid container spacing={4} p={2} rowSpacing={2} columnSpacing={2}>
+  return <Grid container spacing={4} p={2} rowSpacing={2} columnSpacing={2} data-testid="skills-component">
   <Grid item xs={12} sm={6} md={4} >
       <SkillCard image={proImg} list={skillsData.languages.map((language) => language.name)}/>
   </Grid>
