@@ -16,6 +16,7 @@ Visit [my portfolio](https://my-portfolio-gagan-c.vercel.app/) to explore my wor
 
 - React
 - Tailwind CSS
+- Material UI
 - Vite
 
 
