@@ -7,7 +7,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
       <HashRouter>
         <NavigationBar></NavigationBar>
         <Routes>
@@ -16,7 +15,6 @@ function App() {
           <Route path="/projects" Component={Projects} />
         </Routes>
       </HashRouter>
-    </>
   );
 }
 
