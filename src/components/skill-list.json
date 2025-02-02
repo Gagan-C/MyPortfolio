@@ -13,8 +13,12 @@
         "icon": ""
       },
       {
-        "name": "Go",
+        "name": "TypeScript",
         "icon": ""
+      },
+      {
+        "name":"JavaScript",
+        "icon":""
       }
     ],
     "tools": [
@@ -24,12 +28,16 @@
       { "name": "Git", "icon": "" },
       { "name": "SVN", "icon": "" },
       { "name": "Appian BPM", "icon": "" },
-      { "name": "Appian RPA", "icon": "" }
+      { "name": "Appian RPA", "icon": "" },
+      { "name": "GitHub Actions", "icon": "" },
+      { "name": "Jira", "icon": "" }
     ],
     "databases": [
       { "name": "MariDB", "icon": "" },
       { "name": "MySQL", "icon": "" },
-      { "name": "Oracle 11g", "icon": "" }
+      { "name": "Oracle 11g", "icon": "" },
+      { "name": "Firebase", "icon": "" },
+      { "name": "MongoDB", "icon": "" }
     ],
     "frameworks":[
       {"name":"Spring", "icon":""},
@@ -37,7 +45,9 @@
       {"name":"Flask","icon":""},
       {"name":"Django","icon":""},
       {"name":"Pandas","icon":""},
-      {"name":"Qt","icon":""}
+      {"name":"Qt","icon":""},
+      {"name":"Numpy", "icon":""},
+      {"name":"Scikit-learn", "icon":""},
+      {"name":"Ollama", "icon":""}
     ]
   }
-  
