@@ -23,3 +23,7 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+# Html Reports and coverage (jest files)
+html-report
+coverage
