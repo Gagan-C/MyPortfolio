@@ -4,7 +4,7 @@ on:
         branches: [ main ]
 jobs:
     test:
-        runs-on: ubuntu_runner
+        runs-on: ubuntu_latest
         steps:
         - uses: actions/checkout@v3
         - name: Setup node js for using jest
