@@ -4,12 +4,10 @@ on:
         branches: [ main ]
 jobs:
     test:
-        runs-on: 
-          - ubuntu-latest
-          - ubuntu_runner
+        runs-on: ubuntu_runner
         steps:
         - uses: actions/checkout@v3
-        - name: Setup noee js for using jest
+        - name: Setup node js for using jest
           uses: actions/setup-node@v3
           with:
             node-version: '18'
