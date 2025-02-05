@@ -1,43 +1,122 @@
 {
-    "languages": [
-      {
-        "name": "C++",
-        "icon": ""
-      },
-      {
-        "name": "Java",
-        "icon": ""
-      },
-      {
-        "name": "Python",
-        "icon": ""
-      },
-      {
-        "name": "Go",
-        "icon": ""
-      }
-    ],
-    "tools": [
-      { "name": "Docker", "icon": "" },
-      { "name": "Kubernetes", "icon": "" },
-      { "name": "Postman", "icon": "" },
-      { "name": "Git", "icon": "" },
-      { "name": "SVN", "icon": "" },
-      { "name": "Appian BPM", "icon": "" },
-      { "name": "Appian RPA", "icon": "" }
-    ],
-    "databases": [
-      { "name": "MariDB", "icon": "" },
-      { "name": "MySQL", "icon": "" },
-      { "name": "Oracle 11g", "icon": "" }
-    ],
-    "frameworks":[
-      {"name":"Spring", "icon":""},
-      {"name":"Spring Boot", "icon":""},
-      {"name":"Flask","icon":""},
-      {"name":"Django","icon":""},
-      {"name":"Pandas","icon":""},
-      {"name":"Qt","icon":""}
-    ]
-  }
-  
+  "languages": [
+    {
+      "name": "C++",
+      "icon": "fab fa-cuttlefish"
+    },
+    {
+      "name": "Java",
+      "icon": "fab fa-java"
+    },
+    {
+      "name": "Python",
+      "icon": "fab fa-python"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "fab fa-js"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "fab fa-js"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Docker",
+      "icon": "fab fa-docker"
+    },
+    {
+      "name": "Kubernetes",
+      "icon": "fab fa-kubernetes"
+    },
+    {
+      "name": "Postman",
+      "icon": "fab fa-postman"
+    },
+    {
+      "name": "Git",
+      "icon": "fab fa-git"
+    },
+    {
+      "name": "SVN",
+      "icon": ""
+    },
+    {
+      "name": "Appian BPM",
+      "icon": ""
+    },
+    {
+      "name": "Appian RPA",
+      "icon": ""
+    },
+    {
+      "name": "GitHub Actions",
+      "icon": "fab fa-github"
+    },
+    {
+      "name": "Jira",
+      "icon": "fab fa-jira"
+    }
+  ],
+  "databases": [
+    {
+      "name": "MariDB",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "MySQL",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "Oracle 11g",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "Firebase",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "fas fa-database"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Spring",
+      "icon": "fab fa-java"
+    },
+    {
+      "name": "Spring Boot",
+      "icon": "fab fa-java"
+    },
+    {
+      "name": "Flask",
+      "icon": "fas fa-flask"
+    },
+    {
+      "name": "Django",
+      "icon": "fab fa-python"
+    },
+    {
+      "name": "Pandas",
+      "icon": "fas fa-square-root-alt"
+    },
+    {
+      "name": "Qt",
+      "icon": ""
+    },
+    {
+      "name": "Numpy",
+      "icon": "fas fa-square-root-alt"
+    },
+    {
+      "name": "Scikit-learn",
+      "icon": "fas fa-square-root-alt"
+    },
+    {
+      "name": "Ollama",
+      "icon": ""
+    }
+  ]
+}
