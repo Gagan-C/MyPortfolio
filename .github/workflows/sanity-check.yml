@@ -1,9 +1,9 @@
-name: Run a sanity check
+name: sanity check
 run-name: ${{ github.actor }} is running sanity check
 on: [push]
 jobs:
   Eslint:
-    runs-on: self-hosted
+    runs-on: [self-hosted, ubuntu-latest]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
