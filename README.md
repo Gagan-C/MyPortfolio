@@ -1,4 +1,5 @@
 # My Portfolio
+[![Run Jest Test Cases](https://github.com/Gagan-C/MyPortfolio/actions/workflows/run-test-cases.yml/badge.svg)](https://github.com/Gagan-C/MyPortfolio/actions/workflows/run-test-cases.yml) [![Run a sanity check](https://github.com/Gagan-C/MyPortfolio/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/Gagan-C/MyPortfolio/actions/workflows/sanity-check.yml)
 
 Welcome to my portfolio! This project showcases my skills, projects, and experiences.
 
