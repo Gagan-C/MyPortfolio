@@ -1,11 +1,8 @@
-// import { MemoryRouter } from 'react-router-dom';
 import { render, screen,fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 import '@testing-library/jest-dom';
 import NavigationBar from '../components/NavigationBar';
-// import Skills from '../components/Skills';
-// import Projects from '../components/Projects';
 
 describe('App Component', () => {
   test('renders NavigationBar', () => {
@@ -99,5 +96,16 @@ describe('App Component', () => {
     const homeLink = screen.getByTestId('home-link');
     await user.click(homeLink);
     expect(menu).not.toBeInTheDocument();
+  });
+
+  test('navigates to Resume component when Resume link is clicked', async () => {
+    render(<App />);
+    const user = userEvent.setup();
+    
+    const resumeLink = screen.getByText(/resume/i);
+    await user.click(resumeLink);
+    
+    const resumeElement = screen.getByTestId('resume-iframe');
+    expect(resumeElement).toBeInTheDocument();
   });
 });
