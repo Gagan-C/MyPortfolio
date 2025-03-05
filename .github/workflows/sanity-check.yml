@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is running sanity check
 on: [push]
 jobs:
   Eslint:
+    name: Eslint
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
