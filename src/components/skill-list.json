@@ -1,6 +1,10 @@
 {
   "languages": [
     {
+      "name": "C#",
+      "icon": "fab fa-cuttlefish"
+    },
+    {
       "name": "C++",
       "icon": "fab fa-cuttlefish"
     },
@@ -43,14 +47,6 @@
       "icon": ""
     },
     {
-      "name": "Appian BPM",
-      "icon": ""
-    },
-    {
-      "name": "Appian RPA",
-      "icon": ""
-    },
-    {
       "name": "GitHub Actions",
       "icon": "fab fa-github"
     },
@@ -61,10 +57,6 @@
   ],
   "databases": [
     {
-      "name": "MariDB",
-      "icon": "fas fa-database"
-    },
-    {
       "name": "MySQL",
       "icon": "fas fa-database"
     },
@@ -73,38 +65,50 @@
       "icon": "fas fa-database"
     },
     {
-      "name": "Firebase",
+      "name": "SQL Server",
       "icon": "fas fa-database"
     },
     {
-      "name": "MongoDB",
+      "name": "PostgreSQL",
       "icon": "fas fa-database"
     }
   ],
   "frameworks": [
     {
-      "name": "Spring",
-      "icon": "fab fa-java"
+      "name":".NET Core",
+      "icon":""
     },
     {
-      "name": "Spring Boot",
-      "icon": "fab fa-java"
+      "name":"ASP.NET",
+      "icon":""
+    },
+    {
+      "name":"Identity Core Framework",
+      "icon":""
+    },
+    {
+      "name":"Entity Framework Core",
+      "icon":""
+    },
+    {
+      "name":"SignalR",
+      "icon":""
+    },
+    {
+      "name":"ReactJS",
+      "icon":"fa-brands fa-react"
+    },
+    {
+      "name":"Angular",
+      "icon":"fa-brands fa-angular"
     },
     {
       "name": "Flask",
       "icon": "fas fa-flask"
     },
     {
-      "name": "Django",
-      "icon": "fab fa-python"
-    },
-    {
       "name": "Pandas",
       "icon": "fas fa-square-root-alt"
-    },
-    {
-      "name": "Qt",
-      "icon": ""
     },
     {
       "name": "Numpy",
