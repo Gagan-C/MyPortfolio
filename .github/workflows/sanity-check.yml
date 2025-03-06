@@ -3,7 +3,8 @@ run-name: ${{ github.actor }} is running sanity check
 on: [push]
 jobs:
   Eslint:
-    runs-on: self-hosted
+    name: Eslint
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -18,3 +19,14 @@ jobs:
           npm run lint ${{ github.workspace }}
       - run: echo "ESLint has been run."
       - run: echo "This job's status is ${{ job.status }}."
+  SonarQube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
