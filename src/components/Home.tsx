@@ -1,18 +1,13 @@
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
-import Background from "../assets/background-img.jpg";
 import ProfilePic from "../assets/profile-pic.png";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { Paper } from "@mui/material";
 import aboutMe from "./aboutme.json";
 function Home() {
-  const background = {
-    backgroundImage: `url(${Background})`
-  };
   return (
     <div data-testid="home-component" className="home">
-      <div className="bg-cover bg-center bg-image" style={background}>
-        <div className="text-white  h-screen flex items-center justify-center  backdrop-blur-sm">
+      <div className="text-white h-screen flex items-center justify-center">
           <div className="banner-text text-5xl items-center justify-center container mx-auto ">
           <Paper elevation={1} className="px-10 py-4">
             <div className="flex items-center">
@@ -61,7 +56,6 @@ function Home() {
             </Paper>
           </div>
         </div>
-      </div>
     </div>
   );
 }
