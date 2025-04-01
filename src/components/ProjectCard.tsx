@@ -29,7 +29,7 @@ function ProjectCard({
     );
 
   return (
-    <Card raised={true} sx={{ maxWidth: 345 }}>
+    <Card raised={true} sx={{ height: "100%", width: "100%" }}>
       <CardMedia
         component="img"
         alt="Project img"
@@ -40,7 +40,14 @@ function ProjectCard({
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            height: "50px",
+            overflowY: "auto",
+          }}
+        >
           {description}
         </Typography>
         <Typography variant="overline" color="text.secondary">
