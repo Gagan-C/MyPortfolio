@@ -6,7 +6,7 @@ function Projects() {
   return (
     <Grid container spacing={3} padding={4} data-testid="projects-component">
       {projectData.map((card) => (
-        <Grid item xs={11} sm={6} md={4}>
+        <Grid item xs={11} sm={6} md={4} key={card.id}>
           <ProjectCard
             title={card.name}
             description={card.description}

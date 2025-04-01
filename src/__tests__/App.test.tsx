@@ -15,6 +15,12 @@ describe('App Component', () => {
     render(<App />);
     const homeElement = screen.getByTestId('home-component');
     expect(homeElement).toBeInTheDocument();
+    
+    const profilePicElement = screen.getByTestId('profile-pic');
+    expect(profilePicElement).toBeInTheDocument();
+    
+    const socialLinksElement = screen.getByTestId('social-links');
+    expect(socialLinksElement).toBeInTheDocument();
   });
   
   test('navigates to Skills component when Skills link is clicked', async () => {
@@ -23,9 +29,10 @@ describe('App Component', () => {
     
     const skillsLink = screen.getByText(/Skills/);
     await user.click(skillsLink);
-    
+    const homeElement = screen.queryByTestId('home-component');
     const skillsElement = screen.getByTestId('skills-component');
     expect(skillsElement).toBeInTheDocument();
+    expect(homeElement).not.toBeInTheDocument();
   });
 
   test('navigates to Projects component when Projects link is clicked', async () => {
