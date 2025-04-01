@@ -3,21 +3,21 @@ import Background from "../assets/background-img.jpg";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { Paper } from "@mui/material";
+import aboutMe from "./aboutme.json";
 function Home() {
   const background = {
     backgroundImage: `url(${Background})`
   };
-  const aboutMe='I’m a passionate software engineer with an insatiable curiosity for technology. Whether it’s diving into a new programming language, exploring cutting-edge frameworks, or solving complex problems, I thrive on continuous learning. My journey in the tech world has been marked by rapid adaptation and a hunger for knowledge. As a quick learner, I’ve successfully mastered various software tools, methodologies, and systems. Let’s build something amazing together!'
   return (
     <div data-testid="home-component" className="home">
       <div className="bg-cover bg-center bg-image" style={background}>
         <div className="text-white  h-screen flex items-center justify-center  backdrop-blur-sm">
           <div className="banner-text text-5xl items-center justify-center container mx-auto ">
           <Paper elevation={1} className="px-10 py-4">
-            <h1 className="responsive-headline pb-3">Howdy!! I am {"Gagan Chatu"}</h1>
+            <h1 className="responsive-headline pb-3">{aboutMe.body.greeting} {aboutMe.body.heading}</h1>
             
             <h3 className="text-xl pb-2">
-              {aboutMe}
+              {aboutMe.body.desciption}
             </h3>
             </Paper>
             <hr className="pb-2" />

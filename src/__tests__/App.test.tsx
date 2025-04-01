@@ -21,7 +21,7 @@ describe('App Component', () => {
     render(<App />);
     const user = await userEvent.setup();
     
-    const skillsLink = screen.getByText(/skills/i);
+    const skillsLink = screen.getByText(/Skills/);
     await user.click(skillsLink);
     
     const skillsElement = screen.getByTestId('skills-component');

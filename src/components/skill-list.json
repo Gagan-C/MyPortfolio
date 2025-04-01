@@ -99,10 +99,6 @@
       "icon":"fa-brands fa-react"
     },
     {
-      "name":"Angular",
-      "icon":"fa-brands fa-angular"
-    },
-    {
       "name": "Flask",
       "icon": "fas fa-flask"
     },
