@@ -1,120 +1,148 @@
 {
   "languages": [
     {
+      "id": "lang-1",
       "name": "C#",
       "icon": "fab fa-cuttlefish"
     },
     {
+      "id": "lang-2",
       "name": "C++",
       "icon": "fab fa-cuttlefish"
     },
     {
+      "id": "lang-3",
       "name": "Java",
       "icon": "fab fa-java"
     },
     {
+      "id": "lang-4",
       "name": "Python",
       "icon": "fab fa-python"
     },
     {
+      "id": "lang-5",
       "name": "TypeScript",
       "icon": "fab fa-js"
     },
     {
+      "id": "lang-6",
       "name": "JavaScript",
       "icon": "fab fa-js"
     }
   ],
   "tools": [
     {
+      "id": "tool-1",
       "name": "Docker",
       "icon": "fab fa-docker"
     },
     {
+      "id": "tool-2",
       "name": "Kubernetes",
       "icon": "fab fa-kubernetes"
     },
     {
+      "id": "tool-3",
       "name": "Postman",
       "icon": "fab fa-postman"
     },
     {
+      "id": "tool-4",
       "name": "Git",
       "icon": "fab fa-git"
     },
     {
+      "id": "tool-5",
       "name": "SVN",
       "icon": ""
     },
     {
+      "id": "tool-6",
       "name": "GitHub Actions",
       "icon": "fab fa-github"
     },
     {
+      "id": "tool-7",
       "name": "Jira",
       "icon": "fab fa-jira"
     }
   ],
   "databases": [
     {
+      "id": "db-1",
       "name": "MySQL",
       "icon": "fas fa-database"
     },
     {
+      "id": "db-2",
       "name": "Oracle 11g",
       "icon": "fas fa-database"
     },
     {
+      "id": "db-3",
       "name": "SQL Server",
       "icon": "fas fa-database"
     },
     {
+      "id": "db-4",
       "name": "PostgreSQL",
       "icon": "fas fa-database"
     }
   ],
   "frameworks": [
     {
-      "name":".NET Core",
-      "icon":""
+      "id": "fw-1",
+      "name": ".NET Core",
+      "icon": ""
     },
     {
-      "name":"ASP.NET",
-      "icon":""
+      "id": "fw-2",
+      "name": "ASP.NET",
+      "icon": ""
     },
     {
-      "name":"Identity Core Framework",
-      "icon":""
+      "id": "fw-3",
+      "name": "Identity Core Framework",
+      "icon": ""
     },
     {
-      "name":"Entity Framework Core",
-      "icon":""
+      "id": "fw-4",
+      "name": "Entity Framework Core",
+      "icon": ""
     },
     {
-      "name":"SignalR",
-      "icon":""
+      "id": "fw-5",
+      "name": "SignalR",
+      "icon": ""
     },
     {
-      "name":"ReactJS",
-      "icon":"fa-brands fa-react"
+      "id": "fw-6",
+      "name": "ReactJS",
+      "icon": "fa-brands fa-react"
     },
     {
+      "id": "fw-7",
       "name": "Flask",
       "icon": "fas fa-flask"
     },
     {
+      "id": "fw-8",
       "name": "Pandas",
       "icon": "fas fa-square-root-alt"
     },
     {
+      "id": "fw-9",
       "name": "Numpy",
       "icon": "fas fa-square-root-alt"
     },
     {
+      "id": "fw-10",
       "name": "Scikit-learn",
       "icon": "fas fa-square-root-alt"
     },
     {
+      "id": "fw-11",
       "name": "Ollama",
       "icon": ""
     }

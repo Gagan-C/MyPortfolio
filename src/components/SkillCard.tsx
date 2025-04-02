@@ -3,7 +3,7 @@ import { Card, CardMedia, Chip, Stack } from "@mui/material";
 
 interface SkillCardProps {
   image: string;
-  list: { name: string; icon: string }[];
+  list: { id:string, name: string; icon: string }[];
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ image, list }) => {
@@ -11,9 +11,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ image, list }) => {
     <Card raised>
       <CardMedia component="img" sx={{ height: 200 }} image={image}></CardMedia>
       <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap">
-        {list.map((item, index) => (
+        {list.map((item) => (
           <Chip
-            key={index}
+            key={item.id}
             label={item.name}
             color="primary"
             size="small"
