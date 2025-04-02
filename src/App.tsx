@@ -1,4 +1,3 @@
-import "./components/NavigationBar";
 import NavigationBar from "./components/NavigationBar";
 import Skills from "./components/Skills";
 import Home from "./components/Home";

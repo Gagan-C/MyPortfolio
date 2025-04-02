@@ -6,19 +6,21 @@ import Typography from "@mui/material/Typography";
 import ProjectPlaceholderImage from "../assets/project-placeholder.svg";
 import { Link } from "@mui/material";
 
+interface ProjectCardProps {
+  readonly title: string;
+  readonly description: string;
+  readonly link: string;
+  readonly demo: string;
+  readonly tools: string;
+}
+
 function ProjectCard({
   title,
   description,
   link,
   demo,
   tools,
-}: {
-  title: string;
-  description: string;
-  link: string;
-  demo: string;
-  tools: string;
-}) {
+}: ProjectCardProps) {
   const demoLink =
     demo === "" ? (
       <></>
@@ -63,4 +65,5 @@ function ProjectCard({
     </Card>
   );
 }
+
 export default ProjectCard;
