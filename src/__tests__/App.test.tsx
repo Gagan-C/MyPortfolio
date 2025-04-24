@@ -13,37 +13,48 @@ describe('App Component', () => {
 
   test('renders Home component on default route', () => {
     render(<App />);
-    const homeElement = screen.getByTestId('home-component');
-    expect(homeElement).toBeInTheDocument();
     
-    const profilePicElement = screen.getByTestId('profile-pic');
-    expect(profilePicElement).toBeInTheDocument();
+    const homeElementLoading = screen.getByTestId('home-component-loading');
+    expect(homeElementLoading).toBeInTheDocument();
+// wait 2 seconds for the Home component to load
+    setTimeout(() => {
+      const homeElement = screen.getByTestId('home-component');
+      expect(homeElement).toBeInTheDocument();
+        
+      const profilePicElement = screen.getByTestId('profile-pic');
+      expect(profilePicElement).toBeInTheDocument();
+      
+      const socialLinksElement = screen.getByTestId('social-links');
+      expect(socialLinksElement).toBeInTheDocument();
+    }, 1000);
+      
     
-    const socialLinksElement = screen.getByTestId('social-links');
-    expect(socialLinksElement).toBeInTheDocument();
   });
   
   test('navigates to Skills component when Skills link is clicked', async () => {
     render(<App />);
     const user = await userEvent.setup();
-    
-    const skillsLink = screen.getByText(/Skills/);
-    await user.click(skillsLink);
-    const homeElement = screen.queryByTestId('home-component');
-    const skillsElement = screen.getByTestId('skills-component');
-    expect(skillsElement).toBeInTheDocument();
-    expect(homeElement).not.toBeInTheDocument();
+    setTimeout(async() => {
+      const skillsLink = screen.getByText(/Skills/);
+      await user.click(skillsLink);
+      const homeElement = screen.queryByTestId('home-component');
+      const skillsElement = screen.getByTestId('skills-component');
+      expect(skillsElement).toBeInTheDocument();
+      expect(homeElement).not.toBeInTheDocument();
+    }, 1000);
   });
 
   test('navigates to Projects component when Projects link is clicked', async () => {
     render(<App />);
     const user = userEvent.setup();
+    setTimeout(async () => {
+      const projectsLink = screen.getByText(/projects/i);
+      await user.click(projectsLink);
+      
+      const projectsElement = screen.getByTestId('projects-component');
+      expect(projectsElement).toBeInTheDocument();
+    }, 1000);
     
-    const projectsLink = screen.getByText(/projects/i);
-    await user.click(projectsLink);
-    
-    const projectsElement = screen.getByTestId('projects-component');
-    expect(projectsElement).toBeInTheDocument();
   });
 
   test('navigates to Home component when Home link is clicked from NavigationBar', async () => {
@@ -52,9 +63,21 @@ describe('App Component', () => {
     
     const homeLink = screen.getByText(/home/i);
     await user.click(homeLink);
-    
-    const homeElement = screen.getByTestId('home-component');
-    expect(homeElement).toBeInTheDocument();
+
+    const homeElementLoading = screen.getByTestId('home-component-loading');
+    expect(homeElementLoading).toBeInTheDocument();
+
+    setTimeout(() => {
+      const homeElement = screen.getByTestId('home-component');
+      expect(homeElement).toBeInTheDocument();
+        
+      const profilePicElement = screen.getByTestId('profile-pic');
+      expect(profilePicElement).toBeInTheDocument();
+      
+      const socialLinksElement = screen.getByTestId('social-links');
+      expect(socialLinksElement).toBeInTheDocument();
+    }, 1000);
+
   });
 
   test('renders mobile menu button and opens menu on click', async () => {

@@ -27,3 +27,5 @@ build
 # Html Reports and coverage (jest files)
 html-report
 coverage
+.vercel
+.env*.local
