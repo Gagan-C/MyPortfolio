@@ -5,14 +5,25 @@ import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { Paper } from "@mui/material";
 
+interface AboutMe {
+  body: {
+    greeting: string;
+    heading: string;
+    description: string;
+  };
+}
+
 function Home() {
-  const [aboutMe, setAboutMe] = useState<any>(null);
+  const [aboutMe, setAboutMe] = useState<AboutMe | null>(null);
 
   useEffect(() => {
     const fetchAboutMe = async () => {
       try {
         const response = await fetch("https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/aboutme.json");
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data: AboutMe = await response.json();
         setAboutMe(data);
       } catch (error) {
         console.error("Error fetching aboutMe data:", error);
@@ -25,7 +36,7 @@ function Home() {
   if (!aboutMe) {
     return <div data-testid="home-component-loading">Loading...</div>;
   }
- 
+
   return (
     <div data-testid="home-component" className="home">
       <div className="text-white h-screen flex items-center justify-center">
