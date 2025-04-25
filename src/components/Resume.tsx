@@ -6,7 +6,7 @@ const Resume: React.FC = () => {
     <div className="resume-container">
       <div className="resume-wrapper">
         <iframe
-          src="https://profile.indeed.com/p/7fvrkbz"
+          src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/GaganChatuResume"
           width="100%"
           height="100%"
           allow="autoplay"
