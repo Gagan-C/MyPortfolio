@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FaDiscord, FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
-import ProfilePic from "../assets/profile-pic.png";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { Paper } from "@mui/material";
@@ -46,7 +45,7 @@ function Home() {
               <div className="w-1/6 md:w-1/6 sm:w-1/2 text-center">
                 <img
                   data-testid="profile-pic"
-                  src={ProfilePic}
+                  src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/profile-pic.png"
                   className="rounded-full w-32 h-32 object-cover border-2 border-white shadow-lg mb-1"
                   alt="profile-picture"
                 />

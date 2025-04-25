@@ -3,7 +3,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import ProjectPlaceholderImage from "../assets/project-placeholder.svg";
 import { Link } from "@mui/material";
 
 interface ProjectCardProps {
@@ -36,7 +35,7 @@ function ProjectCard({
         component="img"
         alt="Project img"
         height="130"
-        image={ProjectPlaceholderImage}
+        image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/project-placeholder.svg"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

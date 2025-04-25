@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import proImg from "../assets/programming.jpeg";
-import dbImg from "../assets/db.jpeg";
-import toolImg from "../assets/tools.jpeg";
-import frameworkImg from "../assets/framework.jpeg";
 import SkillCard from "./SkillCard.tsx";
 
 function Skills() {
@@ -28,16 +24,16 @@ function Skills() {
   return (
     <Grid container spacing={4} p={2} rowSpacing={2} columnSpacing={2} data-testid="skills-component">
       <Grid item xs={12} sm={6} md={4}>
-        <SkillCard image={proImg} list={skillsData.languages} />
+        <SkillCard image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/programming-5nhljZWLrVMu3IFmjYOkjVMs2mMNXs.jpeg" list={skillsData.languages} />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <SkillCard image={dbImg} list={skillsData.databases} />
+        <SkillCard image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/db-DVGUChBoCq2JIodGhj8HErxkO59t8G.jpeg" list={skillsData.databases} />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <SkillCard image={toolImg} list={skillsData.tools} />
+        <SkillCard image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/tools-A9LqWQhbFENV830MPzzR3bEBNEJHtw.jpeg" list={skillsData.tools} />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <SkillCard image={frameworkImg} list={skillsData.frameworks} />
+        <SkillCard image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/framework-PKiGm9MiMWQSO9Sojb0jokp6e63SqV.jpeg" list={skillsData.frameworks} />
       </Grid>
     </Grid>
   );
