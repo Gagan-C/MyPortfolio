@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
 import ProfilePic from "../assets/profile-pic.png";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
@@ -58,6 +58,14 @@ function Home() {
                   >
                     <FaGithub size={20} />
                     <p className="text-sm flex flex-row pl-2">Github</p>
+                  </Link>
+                  <Link
+                    to={"https://www.kaggle.com/gaganchatu"}
+                    className="flex flex-row pl-2 p-1"
+                    target="_blank"
+                  >
+                    <FaKaggle size={20} />
+                    <p className="text-sm flex flex-row pl-2">Kaggle</p>
                   </Link>
                   <Link
                     to={"https://www.linkedin.com/in/gaganchowdarychatu/"}
