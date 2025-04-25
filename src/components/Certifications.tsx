@@ -41,9 +41,9 @@ function Certifications() {
           <Paper elevation={1} className="px-10 py-4">
             <h1 className="text-3xl font-bold mb-4">Certifications</h1>
             <Grid container spacing={3} padding={4} data-testid="projects-component">
-              {certifications.map((cert, index) => (
+              {certifications.map((cert) => (
                 <Grid item xs={12} sm={6} md={4} key={cert.title}>
-                  <Card key={index} className="mb-4 p-4" variant="outlined">
+                  <Card key={cert.id} className="mb-4 p-4" variant="outlined">
                     <div className="flex items-center mb-2">
                       <img
                         src={cert.badge}

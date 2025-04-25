@@ -138,4 +138,29 @@ describe('App Component', () => {
     const resumeElement = screen.getByTestId('resume-iframe');
     expect(resumeElement).toBeInTheDocument();
   });
+
+  test('navigates to Certifications component when Certifications link is clicked', async () => {
+    render(<App />);
+    const user = userEvent.setup();
+  
+    const certificationsLink = screen.getByText(/certification/i);
+    await user.click(certificationsLink);
+
+    
+
+    const loadingElement = screen.getByTestId('certifications-loading');
+    expect(loadingElement).toBeInTheDocument();
+
+    setTimeout(() => {
+      const certificationsElement = screen.getByTestId('certifications-component');
+      expect(certificationsElement).toBeInTheDocument();
+    
+      const projectsElement = screen.getByTestId('projects-component');
+      expect(projectsElement).toBeInTheDocument();
+
+      const certificationCards = screen.getAllByRole('gridcell'); 
+      expect(certificationCards.length).toBeGreaterThan(0); 
+    }, 2000);
+  });
+
 });
