@@ -3,6 +3,7 @@ import Skills from "./components/Skills";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
+import Certifications from "./components/Certifications";
 import background from "./assets/background-img.jpg";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/skills" Component={Skills} />
               <Route path="/projects" Component={Projects} />
               <Route path="/resume" Component={Resume} />
+              <Route path="/certification" Component={Certifications} />
             </Routes>
           </div>
         </div>
