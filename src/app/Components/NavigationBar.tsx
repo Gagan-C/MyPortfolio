@@ -1,15 +1,8 @@
+'use client'
 import { Menu, MenuItem } from "@mui/material";
+import Link from "next/link";
 import { useState } from "react";
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className="block py-2 px-3 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
-    data-testid={`${href.replace('#', '')}-link`}
-  >
-    {children}
-  </a>
-);
 
 const MobileMenuButton = ({ onClick }: { onClick: (event: React.MouseEvent<HTMLButtonElement>) => void }) => (
   <button
@@ -67,38 +60,38 @@ function NavigationBar() {
           MenuListProps={{ "aria-labelledby": "basic-button" }}
           data-testid="menu"
         >
-          <MenuItem onClick={handleMenuClose} href="/" component="a" data-testid="home-link">
-            Home
+          <MenuItem onClick={handleMenuClose} data-testid="home-link">
+            <Link href="/">Home</Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose} href="#projects" component="a" data-testid="projects-link">
-            Projects
+          <MenuItem onClick={handleMenuClose} data-testid="projects-link">
+            <Link href="/Projects">Projects</Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose} href="#skills" component="a" data-testid="skills-link">
-            Skills
+          <MenuItem onClick={handleMenuClose} data-testid="skills-link">
+            <Link href="/Skills">Skills</Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose} href="#resume" component="a" data-testid="resume-link">
-            Resume
+          <MenuItem onClick={handleMenuClose} data-testid="resume-link">
+            <Link href="/Resume">Resume</Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose} href="#certification" component="a" data-testid="certification-link">
-            Certifications
+          <MenuItem onClick={handleMenuClose} data-testid="certification-link">
+            <Link href="/Certification" >Certifications</Link>
           </MenuItem>
         </Menu>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default" data-testid="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
             <li>
-              <NavLink href="/">Home</NavLink>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <NavLink href="#projects">Projects</NavLink>
+              <Link href="/Projects">Projects</Link>
             </li>
             <li>
-              <NavLink href="#skills">Skills</NavLink>
+              <Link href="/Skills">Skills</Link>
             </li>
             <li>
-              <NavLink href="#resume">Resume</NavLink>
+              <Link href="/Resume">Resume</Link>
             </li>
             <li>
-              <NavLink href="#certification">Certifications</NavLink>
+              <Link href="/Certification">Certifications</Link>
             </li>
           </ul>
         </div>
