@@ -1,6 +1,7 @@
+'use client'
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import SkillCard from "./SkillCard.tsx";
+import SkillCard from "../Components/SkillCard";
 
 function Skills() {
   const [skillsData, setSkillsData] = useState({

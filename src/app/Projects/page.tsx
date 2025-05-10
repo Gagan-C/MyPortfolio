@@ -1,6 +1,8 @@
+'use client'
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../Components/ProjectCard";
+
 
 function Projects() {
   interface Project {

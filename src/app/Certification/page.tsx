@@ -1,5 +1,7 @@
+'use client'
 import { useEffect, useState } from "react";
 import { Card, Grid, Paper } from "@mui/material";
+import Image from "next/image";
 
 interface Certification {
   id: string;
@@ -45,10 +47,11 @@ function Certifications() {
                 <Grid item xs={12} sm={6} md={4} key={cert.title}>
                   <Card key={cert.id} className="mb-4 p-4" variant="outlined">
                     <div className="flex items-center mb-2">
-                      <img
+                      <Image
                         src={cert.badge}
                         alt={cert.title}
-                        style={{ width: "100px", height: "100px", objectFit: "cover" }} // Fixed size
+                        width={100}
+                        height={100}
                       />
                       <h2 className="text-xl font-semibold ml-4">{cert.title}</h2>
                     </div>
