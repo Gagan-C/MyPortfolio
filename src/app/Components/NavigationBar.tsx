@@ -64,16 +64,16 @@ function NavigationBar() {
             <Link href="/">Home</Link>
           </MenuItem>
           <MenuItem onClick={handleMenuClose} data-testid="projects-link">
-            <Link href="Projects">Projects</Link>
+            <Link href="/Projects">Projects</Link>
           </MenuItem>
           <MenuItem onClick={handleMenuClose} data-testid="skills-link">
-            <Link href="Skills">Skills</Link>
+            <Link href="/Skills">Skills</Link>
           </MenuItem>
           <MenuItem onClick={handleMenuClose} data-testid="resume-link">
-            <Link href="Resume">Resume</Link>
+            <Link href="/Resume">Resume</Link>
           </MenuItem>
           <MenuItem onClick={handleMenuClose} data-testid="certification-link">
-            <Link href="Certification" >Certifications</Link>
+            <Link href="/Certification" >Certifications</Link>
           </MenuItem>
         </Menu>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default" data-testid="navbar-default">
@@ -82,16 +82,16 @@ function NavigationBar() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="Projects">Projects</Link>
+              <Link href="/Projects">Projects</Link>
             </li>
             <li>
-              <Link href="Skills">Skills</Link>
+              <Link href="/Skills">Skills</Link>
             </li>
             <li>
-              <Link href="Resume">Resume</Link>
+              <Link href="/Resume">Resume</Link>
             </li>
             <li>
-              <Link href="Certification">Certifications</Link>
+              <Link href="/Certification">Certifications</Link>
             </li>
           </ul>
         </div>
