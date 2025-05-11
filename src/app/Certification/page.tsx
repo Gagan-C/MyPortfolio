@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-import { Card, Grid, Paper } from "@mui/material";
 import Image from "next/image";
 import Loading from "../Components/Loading";
 
@@ -40,13 +39,11 @@ function Certifications() {
   return (
     <div data-testid="certifications-component" className="certifications">
       <div className="text-white flex items-center justify-center min-h-screen">
-        <div className="container mx-auto">
-          <Paper elevation={1} className="px-10 py-4">
+        <div className="container bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 mx-auto">
             <h1 className="text-3xl font-bold mb-4">Certifications</h1>
-            <Grid container spacing={3} padding={4} data-testid="projects-component">
+              <div className="grid gap-4 md:grid-cols-3 p-5 m-5">
               {certifications.map((cert) => (
-                <Grid item xs={12} sm={6} md={4} key={cert.title}>
-                  <Card key={cert.id} className="mb-4 p-4" variant="outlined">
+                  <div key={cert.id} className="rounded-md shadow-md p-4 flex flex-col h-auto" >
                     <div className="flex items-center mb-2">
                       <Image
                         src={cert.badge}
@@ -69,11 +66,9 @@ function Certifications() {
                         View Certification
                       </a>
                     </div>
-                  </Card>
-                </Grid>
+                  </div>
               ))}
-            </Grid>
-          </Paper>
+              </div>
         </div>
       </div>
     </div>
