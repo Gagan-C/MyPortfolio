@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import ProjectCard from "../Components/ProjectCard";
+import Loading from "../Components/Loading";
 
 
 function Projects() {
@@ -25,6 +26,9 @@ function Projects() {
     }
     fetchProjectData();
   }, []);
+  if(!projectData) {
+    return <div data-testid="projects-component-loading"><Loading/></div>;
+  }
   return (
     <Grid container spacing={3} padding={4} data-testid="projects-component">
       {projectData.map((card) => (
