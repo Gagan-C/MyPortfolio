@@ -29,12 +29,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       <div 
-        className="bg-cover bg-center bg-image"
+        className="bg-cover bg-center h-screen bg-image"
         style={{
           backgroundImage: `url(https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/background-img.jpg)`,
         }}
       >
-          <div className="backdrop-blur-sm">
+          <div className="backdrop-blur-sm h-screen">
           <NavigationBar/>
             {children}
           </div>

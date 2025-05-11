@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Card, Grid, Paper } from "@mui/material";
 import Image from "next/image";
+import Loading from "../Components/Loading";
 
 interface Certification {
   id: string;
@@ -33,12 +34,12 @@ function Certifications() {
   }, []);
 
   if (!certifications) {
-    return <div data-testid="certifications-loading">Loading...</div>;
+    return <div data-testid="certifications-loading"><Loading/></div>;
   }
 
   return (
     <div data-testid="certifications-component" className="certifications">
-      <div className="text-white h-screen flex items-center justify-center">
+      <div className="text-white flex items-center justify-center min-h-screen">
         <div className="container mx-auto">
           <Paper elevation={1} className="px-10 py-4">
             <h1 className="text-3xl font-bold mb-4">Certifications</h1>

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import SkillCard from "../Components/SkillCard";
+import Loading from "../Components/Loading";
 
 function Skills() {
   const [skillsData, setSkillsData] = useState({
@@ -21,6 +22,9 @@ function Skills() {
     }
     fetchSkillsData();
   }, []);
+  if(!skillsData) {
+    return <div data-testid="skills-component-loading"><Loading/></div>;
+  }
 
   return (
     <Grid container spacing={4} p={2} rowSpacing={2} columnSpacing={2} data-testid="skills-component">

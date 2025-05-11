@@ -1,11 +1,10 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
-import { FaDiscord, FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
-import { MdEmail } from "react-icons/md";
-import { Paper } from "@mui/material";
+import { Grid } from "@mui/material";
 import Image from "next/image";
+import Loading from "./Components/Loading";
+import Socials from "./Components/Socials";
 
 interface AboutMe {
   body: {
@@ -21,7 +20,9 @@ function Home() {
   useEffect(() => {
     const fetchAboutMe = async () => {
       try {
-        const response = await fetch("https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/aboutme.json");
+        const response = await fetch(
+          "https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/aboutme.json"
+        );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -36,75 +37,96 @@ function Home() {
   }, []);
 
   if (!aboutMe) {
-    return <div data-testid="home-component-loading">Loading...</div>;
+    return (
+      <div data-testid="home-component-loading">
+        <Loading />
+      </div>
+    );
   }
 
   return (
     <div data-testid="home-component" className="home">
-      <div className="text-white h-screen flex items-center justify-center">
+      <div className="text-white flex items-center justify-center min-h-screen">
         <div className="banner-text text-5xl items-center justify-center container mx-auto">
-          <Paper elevation={1} className="px-10 py-4">
+          <div className="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
             <div className="flex items-center">
-              <div className="w-1/6 md:w-1/6 sm:w-1/2 text-center">
-                <Image
-                  data-testid="profile-pic"
-                  src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/profile-pic.png"
-                  width={500}
-                  height={500}
-                  className="rounded-full w-32 h-32 object-cover border-2 border-white shadow-lg mb-1"
-                  alt="profile-picture"
-                />
-                <div data-testid="social-links">
-                  <Link
-                    href={"https://github.com/Gagan-C"}
-                    className="flex flex-row pl-2 p-1"
-                    target="_blank"
+              {/* Socials */}
+              <Grid
+                container
+                spacing={2}
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                <Grid
+                  item
+                  xs={12}
+                  md={1}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                >
+                  <Grid
+                    container
+                    spacing={2}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                   >
-                    <FaGithub size={20} />
-                    <p className="text-sm flex flex-row pl-2">Github</p>
-                  </Link>
-                  <Link
-                    href={"https://www.kaggle.com/gaganchatu"}
-                    className="flex flex-row pl-2 p-1"
-                    target="_blank"
+                    <Grid
+                      container
+                      direction="column"
+                      alignItems="center"
+                      spacing={2}
+                    >
+                      <Grid item>
+                        <Image
+                          data-testid="profile-pic"
+                          src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/profile-pic.png"
+                          width={500}
+                          height={500}
+                          className="rounded-full w-32 h-32 object-cover border-2 border-white shadow-lg mb-1"
+                          alt="profile-picture"
+                        />
+                      </Grid>
+                      <Grid item>
+                        <Socials/>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={10}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                >
+                  <Grid
+                    container
+                    spacing={2}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                   >
-                    <FaKaggle size={20} />
-                    <p className="text-sm flex flex-row pl-2">Kaggle</p>
-                  </Link>
-                  <Link
-                    href={"https://www.linkedin.com/in/gaganchowdarychatu/"}
-                    className="flex flex-row pl-2 p-1"
-                    target="_blank"
-                  >
-                    <FaLinkedin size={20} />
-                    <p className="text-sm flex flex-row pl-2">Linkedin</p>
-                  </Link>
-                  <Link
-                    href={"mailto:gagan.chatu@proton.me"}
-                    className="flex flex-row pl-2 p-1"
-                    target="_blank"
-                  >
-                    <MdEmail size={20} />
-                    <p className="text-sm flex flex-row pl-2">e-Mail</p>
-                  </Link>
-                  <Link
-                    href={"https://discord.gg/S8UwfCN4Md"}
-                    className="flex flex-row pl-2 p-1"
-                    target="_blank"
-                  >
-                    <FaDiscord size={20} />
-                    <p className="text-sm flex flex-row pl-2">Discord</p>
-                  </Link>
-                </div>
-              </div>
-              <div className="w-5/6 md:w-5/6 sm:w-1/2">
-                <h1 className="responsive-headline pb-3">
-                  {aboutMe.body.greeting} {aboutMe.body.heading}
-                </h1>
-                <h3 className="text-xl pb-2">{aboutMe.body.description}</h3>
-              </div>
+                    <Grid
+                      item
+                      xs={12}
+                      md={11}
+                      display="flex"
+                      flexDirection="column"
+                      alignItems="center"
+                    >
+                      <h1 className="responsive-headline pb-3">
+                        {aboutMe.body.greeting} {aboutMe.body.heading}
+                      </h1>
+                      <h3 className="text-xl pt-2 text-justify">
+                        {aboutMe.body.description}
+                      </h3>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </div>
-          </Paper>
+          </div>
         </div>
       </div>
     </div>
