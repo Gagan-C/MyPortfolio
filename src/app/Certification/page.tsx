@@ -43,7 +43,8 @@ function Certifications() {
             <h1 className="text-3xl font-bold mb-4">Certifications</h1>
               <div className="grid gap-4 md:grid-cols-3 p-5 m-5">
               {certifications.map((cert) => (
-                  <div key={cert.id} className="rounded-md shadow-md p-4 flex flex-col h-auto" >
+                  <div key={cert.id} className="bg-blue-100 hover:bg-blue-200 dark:bg-gray-700 dark:hover:bg-gray-600
+                   rounded-md shadow-md p-4 flex flex-col h-auto" >
                     <div className="flex items-center mb-2">
                       <Image
                         src={cert.badge}
