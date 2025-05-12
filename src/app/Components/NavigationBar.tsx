@@ -76,8 +76,8 @@ function NavigationBar() {
             <Link href="/Certification" >Certifications</Link>
           </MenuItem>
         </Menu>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default" data-testid="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
+        <div className="hidden w-full md:block md:w-auto " id="navbar-default" data-testid="navbar-default">
+          <ul className="font-medium flex text-white  flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
             <li>
               <Link href="/">Home</Link>
             </li>

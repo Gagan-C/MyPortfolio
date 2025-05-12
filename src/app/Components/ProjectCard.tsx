@@ -3,7 +3,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Link } from "@mui/material";
+import Link from "next/link";
 
 interface ProjectCardProps {
   readonly title: string;
@@ -24,26 +24,28 @@ function ProjectCard({
     demo === "" ? (
       <></>
     ) : (
-      <Link href={demo} target="_blank">
+      <Link className='text-black dark:text-white 'href={demo} target="_blank">
         Demo
       </Link>
     );
 
   return (
-    <Card raised={true} sx={{ height: "100%", width: "100%" }}>
+    <div className='bg-white dark:bg-gray-800 h-12/12 rounded-md shadow-xl p-4 flex flex-col'>
+    {/* <Card> */}
       <CardMedia
+      className="bg-white dark:bg-gray-200"
         component="img"
         alt="Project img"
-        height="130"
+        height="120"
         image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/project-placeholder.svg"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent className="bg-white dark:bg-gray-800">
+        <Typography  className="text-black dark:text-white" gutterBottom variant="h5" component="div">
           {title}
         </Typography>
         <Typography
           variant="body2"
-          color="text.secondary"
+          className="text-black dark:text-white"
           sx={{
             height: "50px",
             overflowY: "auto",
@@ -51,17 +53,18 @@ function ProjectCard({
         >
           {description}
         </Typography>
-        <Typography variant="overline" color="text.secondary">
+        <Typography className='"text-black dark:text-white' variant="overline" >
           {tools}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Link href={link} target="_blank">
+      <CardActions className="bg-white dark:bg-gray-800">
+        <Link href={link} target="_blank" className="text-black dark:text-white">
           Source Code
         </Link>
         {demoLink}
       </CardActions>
-    </Card>
+    {/* </Card> */}
+    </div>
   );
 }
 

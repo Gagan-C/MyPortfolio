@@ -38,7 +38,7 @@ function Certifications() {
 
   return (
     <div data-testid="certifications-component" className="certifications">
-      <div className="text-white flex items-center justify-center min-h-screen">
+      <div className="text-black dark:text-white flex items-center justify-center min-h-screen">
         <div className="container bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 mx-auto">
             <h1 className="text-3xl font-bold mb-4">Certifications</h1>
               <div className="grid gap-4 md:grid-cols-3 p-5 m-5">
