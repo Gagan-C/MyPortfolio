@@ -77,21 +77,21 @@ function NavigationBar() {
           </MenuItem>
         </Menu>
         <div className="hidden w-full md:block md:w-auto " id="navbar-default" data-testid="navbar-default">
-          <ul className="font-medium flex text-white  flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
+          <ul className="font-medium flex text-white flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
             <li>
-              <Link href="/">Home</Link>
+              <Link className='hover:text-blue-400' href="/">Home</Link>
             </li>
             <li>
-              <Link href="/Projects">Projects</Link>
+              <Link className='hover:text-blue-400' href="/Projects">Projects</Link>
             </li>
             <li>
-              <Link href="/Skills">Skills</Link>
+              <Link className='hover:text-blue-400' href="/Skills">Skills</Link>
             </li>
             <li>
-              <Link href="/Resume">Resume</Link>
+              <Link className='hover:text-blue-400' href="/Resume">Resume</Link>
             </li>
             <li>
-              <Link href="/Certification">Certifications</Link>
+              <Link className='hover:text-blue-400' href="/Certification">Certifications</Link>
             </li>
           </ul>
         </div>
