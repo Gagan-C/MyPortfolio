@@ -10,7 +10,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ image, list }) => {
   return (
     <Card raised>
       <CardMedia component="img" sx={{ height: 200 }} image={image}></CardMedia>
-      <Stack direction={"row"} spacing={1} p={2} useFlexGap flexWrap="wrap">
+      <Stack direction={"row"} className='bg-white dark:bg-gray-800 shadow-xl' spacing={1} p={2} useFlexGap flexWrap="wrap">
         {list.map((item) => (
           <Chip
             key={item.id}

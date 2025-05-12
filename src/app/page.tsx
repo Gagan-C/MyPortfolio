@@ -46,7 +46,7 @@ function Home() {
 
   return (
     <div data-testid="home-component" className="home">
-      <div className="text-white flex items-center justify-center min-h-screen">
+      <div className="text-black dark:text-white flex items-center justify-center min-h-screen">
         <div className="banner-text text-5xl items-center justify-center container mx-auto">
           <div className="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
             <div className="flex items-center">

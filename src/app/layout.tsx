@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./Components/NavigationBar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <div 
-        className="bg-cover bg-center h-screen bg-image"
-        style={{
-          backgroundImage: `url(https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/background-img.jpg)`,
-        }}
-      >
-          <div className="backdrop-blur-sm h-screen">
-          <NavigationBar/>
+      <div className="bg-[url(https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/background-img.jpg)] bg-cover bg-scroll">
+          <div className="backdrop-blur-sm">
+            <NavigationBar/>
             {children}
+            <SpeedInsights/>
+            <Analytics/>
           </div>
         </div>
       </body>

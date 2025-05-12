@@ -1,9 +1,5 @@
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Link } from "@mui/material";
+import { CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import Link from "next/link";
 
 interface ProjectCardProps {
   readonly title: string;
@@ -24,17 +20,17 @@ function ProjectCard({
     demo === "" ? (
       <></>
     ) : (
-      <Link href={demo} target="_blank">
+      <Link className='text-blue-600 dark:text-blue-500 hover:underline 'href={demo} target="_blank">
         Demo
       </Link>
     );
 
   return (
-    <Card raised={true} sx={{ height: "100%", width: "100%" }}>
+    <div className='bg-blue-100 hover:bg-blue-200 dark:bg-gray-800 dark:hover:bg-gray-700 h-full rounded-md shadow-xl p-4 flex flex-col'>
       <CardMedia
         component="img"
         alt="Project img"
-        height="130"
+        height="120"
         image="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/project-placeholder.svg"
       />
       <CardContent>
@@ -43,7 +39,6 @@ function ProjectCard({
         </Typography>
         <Typography
           variant="body2"
-          color="text.secondary"
           sx={{
             height: "50px",
             overflowY: "auto",
@@ -51,17 +46,17 @@ function ProjectCard({
         >
           {description}
         </Typography>
-        <Typography variant="overline" color="text.secondary">
+        <Typography  variant="overline" >
           {tools}
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href={link} target="_blank">
+        <Link href={link} target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline">
           Source Code
         </Link>
         {demoLink}
       </CardActions>
-    </Card>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ const Socials = () => {
   <div data-testid="social-links">
                           <Link
                             href={"https://github.com/Gagan-C"}
-                            className="flex flex-row pl-2 p-1"
+                            className="flex flex-row pl-2 p-1 hover:underline hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md"
                             target="_blank"
                           >
                             <FaGithub size={20} />
@@ -15,7 +15,7 @@ const Socials = () => {
                           </Link>
                           <Link
                             href={"https://www.kaggle.com/gaganchatu"}
-                            className="flex flex-row pl-2 p-1"
+                            className="flex flex-row pl-2 p-1 hover:underline hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md"
                             target="_blank"
                           >
                             <FaKaggle size={20} />
@@ -25,7 +25,7 @@ const Socials = () => {
                             href={
                               "https://www.linkedin.com/in/gaganchowdarychatu/"
                             }
-                            className="flex flex-row pl-2 p-1"
+                            className="flex flex-row pl-2 p-1 hover:underline hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md"
                             target="_blank"
                           >
                             <FaLinkedin size={20} />
@@ -35,7 +35,7 @@ const Socials = () => {
                           </Link>
                           <Link
                             href={"mailto:gagan.chatu@proton.me"}
-                            className="flex flex-row pl-2 p-1"
+                            className="flex flex-row pl-2 p-1 hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md" 
                             target="_blank"
                           >
                             <MdEmail size={20} />
@@ -43,7 +43,7 @@ const Socials = () => {
                           </Link>
                           <Link
                             href={"https://discord.gg/S8UwfCN4Md"}
-                            className="flex flex-row pl-2 p-1"
+                            className="flex flex-row pl-2 p-1 hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md"
                             target="_blank"
                           >
                             <FaDiscord size={20} />
