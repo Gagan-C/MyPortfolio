@@ -48,9 +48,9 @@ function NavigationBar() {
   return (
     <nav className="bg-gray-900" data-testid="navigation-bar">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse" data-testid="brand-link">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Portfolio</span>
-        </a>
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse" data-testid="brand-link">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hover:text-blue-400">Portfolio</span>
+        </Link>
         <MobileMenuButton onClick={handleButtonClick} />
         <Menu
           id="basic-menu"
