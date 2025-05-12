@@ -1,8 +1,4 @@
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import { CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -31,7 +27,6 @@ function ProjectCard({
 
   return (
     <div className='bg-white dark:bg-gray-800 h-12/12 rounded-md shadow-xl p-4 flex flex-col'>
-    {/* <Card> */}
       <CardMedia
       className="bg-white dark:bg-gray-200"
         component="img"
@@ -63,7 +58,6 @@ function ProjectCard({
         </Link>
         {demoLink}
       </CardActions>
-    {/* </Card> */}
     </div>
   );
 }
