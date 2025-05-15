@@ -33,11 +33,8 @@ jobs:
         run: | 
           mkdir my-nextjs-app
           mkdir my-nextjs-app/.next
-          cp -r node_modules my-nextjs-app/node_modules
-          cp -r .next/standalone my-nextjs-app/
-          cp -r .next/static my-nextjs-app/.next/static
+          cp -r /.next/standalone my-nextjs-app/
           cp -r public my-nextjs-app/public
-          cp package.json my-nextjs-app/package.json
 
       # Step 5: Archive the build files
       - name: Archive Build Files
