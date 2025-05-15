@@ -82,9 +82,6 @@ jobs:
           # Navigate to application directory
           cd /var/www/my-nextjs-app
           
-          # Install any missing dependencies
-          npm install --production
-          
            # Start the application with Node.js
           # (Kill any existing process running on the same port first)
           lsof -ti:3000 | xargs kill -9 || true
