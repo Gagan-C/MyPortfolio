@@ -77,7 +77,7 @@ jobs:
           
            # Start the application with Node.js
           # (Kill any existing process running on the same port first)
-          PORT=8080
+          PORT=80
           HOSTNAME="0.0.0.0"
           lsof -ti:$PORT | xargs kill -9 || true
           nohup node ./.next/standalone/server.js > app.log 2>&1 &
