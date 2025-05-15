@@ -29,9 +29,17 @@ jobs:
       - name: Build Next.js Application
         run: npm run build
 
+      - name: Seperating required file
+        run: | 
+          mkdir my-nextjs-app
+          cp node_modules my-nextjs-app/node_modules
+          cp .next/standalone my-nextjs-app/
+          cp .next/static my-nextjs-app/.next/static
+          cp public my-nextjs-app/public
+
       # Step 5: Archive the build files
       - name: Archive Build Files
-        run: tar -czf build.tar.gz ./.next node_modules package.json next.config.js public
+        run: tar -czf build.tar.gz build
         # Adjust files here to include necessary runtime files.
 
       # Step 6: Upload build artifact (optional)
@@ -66,7 +74,7 @@ jobs:
           ssh -i gcloud_key.pem -o StrictHostKeyChecking=no  ${{ secrets.GCP_VM_USERNAME }}@${{ secrets.GCP_VM_IP }}<< 'EOF'
           # Extract build files
           mkdir -p /var/www/my-nextjs-app
-          tar -xzf /tmp/build.tar.gz -C /var/www/my-nextjs-app
+          tar -xzf /tmp/build.tar.gz -C /var/www/
           rm /tmp/build.tar.gz
           
           # Navigate to application directory
@@ -77,8 +85,6 @@ jobs:
           
            # Start the application with Node.js
           # (Kill any existing process running on the same port first)
-          PORT=80
-          HOSTNAME="0.0.0.0"
-          lsof -ti:$PORT | xargs kill -9 || true
+          lsof -ti:3000 | xargs kill -9 || true
           nohup node ./.next/standalone/server.js > app.log 2>&1 &
           EOF
