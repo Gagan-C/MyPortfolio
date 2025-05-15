@@ -58,12 +58,12 @@ jobs:
         run: |
           echo "${{ secrets.GOOGLE_DEPLOY_KEY }}" > gcloud_key.pem
           chmod 600 gcloud_key.pem
-          scp -i gcloud_key.pem -o StrictHostKeyChecking=no build.tar.gz ${GCP_VM_USERNAME}@${GCP_VM_IP}:/tmp/build.tar.gz
+          scp -i gcloud_key.pem -o StrictHostKeyChecking=no build.tar.gz ${{ secrets.GCP_VM_USERNAME }}@${{ secrets.GCP_VM_IP }}:/tmp/build.tar.gz
 
       # Step 3: Deploy build on VM
       - name: Deploy on VM
         run: |
-          ssh -i gcloud_key.pem -o StrictHostKeyChecking=no ${GCP_VM_USERNAME}@${GCP_VM_IP} << 'EOF'
+          ssh -i gcloud_key.pem -o StrictHostKeyChecking=no  ${{ secrets.GCP_VM_USERNAME }}@${{ secrets.GCP_VM_IP }}<< 'EOF'
           # Extract build files
           mkdir -p /var/www/my-nextjs-app
           tar -xzf /tmp/build.tar.gz -C /var/www/my-nextjs-app
