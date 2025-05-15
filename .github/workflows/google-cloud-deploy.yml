@@ -37,6 +37,7 @@ jobs:
           cp -r .next/standalone my-nextjs-app/
           cp -r .next/static my-nextjs-app/.next/static
           cp -r public my-nextjs-app/public
+          cp package.json my-nextjs-app/package.json
 
       # Step 5: Archive the build files
       - name: Archive Build Files
