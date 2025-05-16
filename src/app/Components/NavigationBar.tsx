@@ -75,6 +75,9 @@ function NavigationBar() {
           <MenuItem onClick={handleMenuClose} data-testid="certification-link">
             <Link href="/Certification" >Certifications</Link>
           </MenuItem>
+          <MenuItem onClick={handleMenuClose} data-testid="certification-link">
+            <Link href="/ContactMe" >Contact Me</Link>
+          </MenuItem>
         </Menu>
         <div className="hidden w-full md:block md:w-auto " id="navbar-default" data-testid="navbar-default">
           <ul className="font-medium flex text-white flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
@@ -92,6 +95,9 @@ function NavigationBar() {
             </li>
             <li>
               <Link className='hover:text-blue-400' href="/Certification">Certifications</Link>
+            </li>
+            <li>
+              <Link className='hover:text-blue-400' href="/ContactMe">Contact Me</Link>
             </li>
           </ul>
         </div>
