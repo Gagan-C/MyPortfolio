@@ -84,7 +84,7 @@ function Home() {
                           width={500}
                           height={500}
                           className="rounded-full w-32 h-32 object-cover border-2 border-white shadow-lg mb-1"
-                          alt="profile-picture"
+                          alt="Gagan Chatu's profile-picture"
                         />
                       </Grid>
                       <Grid item>

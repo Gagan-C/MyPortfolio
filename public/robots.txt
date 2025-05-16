@@ -1,3 +1,4 @@
 # Allow all search engines to crawl the site
 User-agent: *
 Allow: /
+Sitemap: https://www.gaganchatu.com/sitemap.xml
