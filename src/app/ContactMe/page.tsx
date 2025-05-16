@@ -11,7 +11,6 @@ function ContactMe() {
     const [error, setError] = React.useState<string | null>(null);
 
     async function handleSubmit(formData: FormData) {
-        // @ts-ignore
         const result = await sendMessage(formData);
         if (result?.error) {
             setStatus(ERROR);
