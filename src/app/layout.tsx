@@ -17,8 +17,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "This is Gagan Chatu's portfolio",
+  title: "Gagan Chatu's Portfolio",
+  description: "Explore Gagan Chatu's projects, skills, and certifications.",
+  keywords: "Gagan Chatu, Portfolio, Projects, Skills, Certifications, Contact, Gagan Chatu Resume, Gagan Chatu CV",
+  authors: [{ name: "Gagan Chatu", url: "https://gaganchatu.com" }],
+  openGraph: {
+    title: "Gagan Chatu's Portfolio",
+    description: "Explore Gagan Chatu's projects, skills, and certifications.",
+    url: "https://www.gaganchatu.com/",
+    type: "profile",
+    images: [
+      {
+        url: "https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/profile-pic.png",
+        width: 600,
+        height: 600,
+        alt: "Gagan Chatu's Profile Picture",
+      },
+    ]    
+  }
 };
 
 export default function RootLayout({

@@ -48,7 +48,7 @@ function Certifications() {
                     <div className="flex items-center mb-2">
                       <Image
                         src={cert.badge}
-                        alt={cert.title}
+                        alt={`Certification badge for ${cert.title}`}
                         width={500}
                         height={500}
                         style={{width:"100px", height:"100px", objectFit: "cover" }}
