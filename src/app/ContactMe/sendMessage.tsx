@@ -60,8 +60,11 @@ export async function sendMessage(formData: FormData) {
         await sqsClient.send(sendMsgCmd);
 
         return { success: true };
-    } catch (err: any) {
-        return { error: err.message || "Failed to send message." };
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            return { error: err.message || "Failed to send message." };
+        }
+        return { error: "Failed to send message." };
     }
 }
 
