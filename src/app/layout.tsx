@@ -5,6 +5,7 @@ import NavigationBar from "./Components/NavigationBar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next";
  import { GoogleAnalytics } from '@next/third-parties/google'
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <Head>
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([{
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Gagan Chatu",
+              url: "https://www.gaganchatu.com/",
+              sameAs: [
+                "https://github.com/Gagan-C",
+                "https://www.linkedin.com/in/gaganchowdarychatu/",
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Gagan Chatu's Portfolio",
+              url: "https://www.gaganchatu.com/",
+              description: "Explore Gagan Chatu's projects, skills, and certifications."
+            }
+          ])
+          }}
+        />
+    </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
