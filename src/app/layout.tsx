@@ -4,6 +4,7 @@ import "./globals.css";
 import NavigationBar from "./Components/NavigationBar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next";
+ import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
             {children}
             <SpeedInsights/>
             <Analytics/>
+            <GoogleAnalytics gaId="G-BL54PMFQ4X" />
           </div>
         </div>
       </body>
