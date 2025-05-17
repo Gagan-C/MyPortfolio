@@ -45,6 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/favicon.ico" />
     <Head>
       <script
           type="application/ld+json"

@@ -1,5 +1,6 @@
 'use client'
 import { Menu, MenuItem } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -49,6 +50,12 @@ function NavigationBar() {
     <nav className="bg-gray-900" data-testid="navigation-bar">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse" data-testid="brand-link">
+          <Image
+          src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/logo.png"
+          height={50}
+          width={50}
+          alt="Gagan Chatu's logo"
+          ></Image>
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hover:text-blue-400">Portfolio</span>
         </Link>
         <MobileMenuButton onClick={handleButtonClick} />
