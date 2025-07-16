@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://www.gaganchatu.com
+
+# Sitemaps
+Sitemap: https://www.gaganchatu.com/sitemap.xml
