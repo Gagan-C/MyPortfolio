@@ -69,9 +69,6 @@ function NavigationBar() {
           <MenuItem onClick={handleMenuClose} data-testid="skills-link">
             <Link href="/Skills">Skills</Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose} data-testid="resume-link">
-            <Link href="/Resume">Resume</Link>
-          </MenuItem>
           <MenuItem onClick={handleMenuClose} data-testid="certification-link">
             <Link href="/Certification" >Certifications</Link>
           </MenuItem>
@@ -86,9 +83,6 @@ function NavigationBar() {
             </li>
             <li>
               <Link className='hover:text-blue-400' href="/Skills">Skills</Link>
-            </li>
-            <li>
-              <Link className='hover:text-blue-400' href="/Resume">Resume</Link>
             </li>
             <li>
               <Link className='hover:text-blue-400' href="/Certification">Certifications</Link>

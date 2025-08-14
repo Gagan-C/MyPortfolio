@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Gagan Chatu's Portfolio",
   description: "Explore Gagan Chatu's projects, skills, and certifications.",
-  keywords: "Gagan Chatu, Portfolio, Projects, Skills, Certifications, Contact, Gagan Chatu Resume, Gagan Chatu CV",
+  keywords: "Gagan Chatu, Portfolio, Projects, Skills, Certifications, Contact",
   authors: [{ name: "Gagan Chatu", url: "https://gaganchatu.com" }],
   openGraph: {
     title: "Gagan Chatu's Portfolio",
