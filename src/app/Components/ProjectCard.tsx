@@ -1,6 +1,6 @@
 import { CardActions, CardContent, CardMedia, Typography, Chip, Box } from "@mui/material";
 import Link from "next/link";
-import { FiExternalLink, FiGithub, FiEye } from "react-icons/fi";
+import { FiGithub, FiEye } from "react-icons/fi";
 
 interface ProjectCardProps {
   readonly title: string;
