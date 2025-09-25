@@ -67,9 +67,9 @@ function ProjectCard({
               Tech Stack
             </Typography>
             <Box className="flex flex-wrap gap-1">
-              {toolsArray.slice(0, 4).map((tool, index) => (
+              {toolsArray.slice(0, 4).map((tool) => (
                 <Chip
-                  key={index}
+                  key={tool}
                   label={tool}
                   size="small"
                   className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
