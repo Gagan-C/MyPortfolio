@@ -30,19 +30,21 @@ function Projects() {
     return <div data-testid="projects-component-loading"><Loading/></div>;
   }
   return (
-    <Grid container spacing={3} padding={4} data-testid="projects-component">
-      {projectData.map((card) => (
-        <Grid item xs={11} sm={6} md={4} key={card.id}>
-          <ProjectCard
-            title={card.name}
-            description={card.description}
-            link={card["project-link"]}
-            demo={card["project-demo"]}
-            tools={card.tools}
-          ></ProjectCard>
-        </Grid>
-      ))}
-    </Grid>
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <Grid container spacing={3} data-testid="projects-component" justifyContent="center">
+        {projectData.map((card) => (
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={card.id}>
+            <ProjectCard
+              title={card.name}
+              description={card.description}
+              link={card["project-link"]}
+              demo={card["project-demo"]}
+              tools={card.tools}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 }
 
