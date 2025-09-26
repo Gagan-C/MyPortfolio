@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { Grid, Container, Typography, Box, Fade, Grow } from "@mui/material";
+import { Grid, Container, Box, Grow } from "@mui/material";
 import SkillCard from "../Components/SkillCard";
 import Loading from "../Components/Loading";
 
@@ -69,7 +69,7 @@ function Skills() {
     <Box className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <Container maxWidth="lg" sx={{ py: 6 }}>
         <Grid container spacing={4} data-testid="skills-component">
-          {skillCategories.map((category, index) => (
+          {skillCategories.map((category) => (
             <Grid item xs={12} sm={6} lg={6} key={category.title}>
               <Grow 
                 in={true} 
