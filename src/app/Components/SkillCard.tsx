@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardMedia, Chip, Stack, Typography, Box, CardContent } from "@mui/material";
+import { Card, CardMedia, Stack, Typography, Box, CardContent } from "@mui/material";
+import CustomChip from './CustomChip';
 
 interface SkillCardProps {
   title: string;
@@ -62,7 +63,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, image, list }) => {
           </Typography>
         </Box>
       </Box>
-      <CardContent sx={{ p: 3 }}>
+
+      <CardContent sx={{ p: 3 }} className="bg-white dark:bg-gray-900">
         <Stack 
           direction="row" 
           spacing={1} 
@@ -71,41 +73,11 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, image, list }) => {
           sx={{ gap: 1.5 }}
         >
           {list.map((item, index) => (
-            <Chip
+            <CustomChip
               key={item.id}
               label={item.name}
-              size="small"
-              icon={<i className={`${item.icon} text-sm`} />}
-              sx={{ 
-                padding: '8px 4px',
-                borderRadius: '12px',
-                fontWeight: 500,
-                fontSize: '0.8rem',
-                background: 'linear-gradient(45deg, #2196F3, #21CBF3)',
-                color: 'white',
-                border: 'none',
-                transition: 'all 0.2s ease-in-out',
-                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
-                '&:hover': {
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 4px 12px rgba(33, 150, 243, 0.4)',
-                  background: 'linear-gradient(45deg, #1976D2, #1E88E5)',
-                },
-                '& .MuiChip-icon': {
-                  fontSize: '16px',
-                  marginLeft: '8px',
-                },
-                '@keyframes fadeInUp': {
-                  from: {
-                    opacity: 0,
-                    transform: 'translateY(20px)',
-                  },
-                  to: {
-                    opacity: 1,
-                    transform: 'translateY(0)',
-                  },
-                }
-              }}
+              className={`bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30`}
+              style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }} 
             />
           ))}
         </Stack>
