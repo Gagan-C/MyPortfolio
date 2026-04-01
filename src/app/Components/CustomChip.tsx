@@ -15,7 +15,7 @@ const CustomChip: React.FC<CustomChipProps> = ({ label, className = '', style, i
     >
       {icon && <span className="text-base">{icon}</span>}
       <span className="whitespace-nowrap">{label}</span>
-      <style jsx>{`
+      <style>{`
         .dark & {
           /* dark-mode specific styles are handled by Tailwind dark: classes on container */
         }
