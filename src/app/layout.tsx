@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./Components/NavigationBar";
 import AnalyticsConsent from "./Components/AnalyticsConsent";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,33 +40,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Gagan Chatu",
+      url: "https://www.gaganchatu.com/",
+      sameAs: [
+        "https://github.com/Gagan-C",
+        "https://www.linkedin.com/in/gaganchowdarychatu/",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Gagan Chatu's Portfolio",
+      url: "https://www.gaganchatu.com/",
+      description: "Explore Gagan Chatu's projects, skills, and certifications.",
+    },
+  ];
+
   return (
     <html lang="en">
-    <Head>
+    <head>
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([{
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Gagan Chatu",
-              url: "https://www.gaganchatu.com/",
-              sameAs: [
-                "https://github.com/Gagan-C",
-                "https://www.linkedin.com/in/gaganchowdarychatu/",
-              ],
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Gagan Chatu's Portfolio",
-              url: "https://www.gaganchatu.com/",
-              description: "Explore Gagan Chatu's projects, skills, and certifications."
-            }
-          ])
+            __html: JSON.stringify(structuredData)
           }}
         />
-    </Head>
+    </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
