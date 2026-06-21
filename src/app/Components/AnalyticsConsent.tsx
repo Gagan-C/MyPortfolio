@@ -89,8 +89,8 @@ function AnalyticsConsent({ gaId }: AnalyticsConsentProps) {
 
   // consent === "prompt"
   return (
-    <div
-      role="dialog"
+    <dialog
+      open
       aria-live="polite"
       aria-label="Cookie consent"
       data-testid="cookie-banner"
@@ -122,7 +122,7 @@ function AnalyticsConsent({ gaId }: AnalyticsConsentProps) {
           Accept
         </button>
       </div>
-    </div>
+    </dialog>
   );
 }
 
