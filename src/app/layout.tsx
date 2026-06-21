@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./Components/NavigationBar";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next";
- import { GoogleAnalytics } from '@next/third-parties/google'
+import AnalyticsConsent from "./Components/AnalyticsConsent";
 import Head from "next/head";
 
 const geistSans = Geist({
@@ -34,7 +32,7 @@ export const metadata: Metadata = {
         height: 600,
         alt: "Gagan Chatu's Profile Picture",
       },
-    ]    
+    ]
   }
 };
 
@@ -77,9 +75,7 @@ export default function RootLayout({
           <div className="backdrop-blur-sm">
             <NavigationBar/>
             {children}
-            <SpeedInsights/>
-            <Analytics/>
-            <GoogleAnalytics gaId="G-BL54PMFQ4X" />
+            <AnalyticsConsent gaId="G-BL54PMFQ4X" />
           </div>
         </div>
       </body>
