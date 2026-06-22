@@ -26,11 +26,11 @@ App Router routes live in `src/app/`, with each route as a directory containing 
 
 Route directory names are **case-sensitive** (`/Projects`, `/Skills`, `/Certification`). `NavigationBar` (`src/app/Components/NavigationBar.tsx`) links to these exact paths and is rendered for every route via the root layout. `not-found.tsx` is the 404 page.
 
-Every page is a **client component** (`'use client'`) that fetches its data in a `useEffect` and shows `src/app/Components/Loading.tsx` until data arrives.
+Pages are **Server Components** (App Router default). Each route's `page.tsx` is an `async` function that fetches its JSON from the Vercel Blob store on the server via the shared helpers in `src/lib/content.ts` (cached with `next: { revalidate: 3600 }`), so content ships in the initial HTML for SEO. Routes that need client interactivity (MUI `Grow` animations) delegate rendering to a sibling client `*View.tsx` component (e.g. `HomeView`, `ProjectsView`, `SkillsView`) that receives the fetched data as props. `Certification/page.tsx` renders directly with no client component.
 
 ### Data source: Vercel Blob (content is remote, not in-repo)
 
-All site content is fetched at runtime from a **Vercel Blob store**, hard-coded as the host `https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com` (referenced directly in every page and in `next.config.js` image `remotePatterns`). There are no local data/JSON files and no server-side fetch — pages call `fetch()` against these blob URLs:
+All site content is fetched on the server from a **Vercel Blob store** (`BLOB_BASE` constant in `src/lib/content.ts`), hard-coded as the host `https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com` (also allow-listed in `next.config.js` image `remotePatterns`). There are no local data/JSON files — `src/lib/content.ts` exposes typed helpers that `fetch()` these blob URLs server-side with ISR caching (`next: { revalidate: 3600 }`):
 
 - `aboutme.json` → Home (`{ body: { greeting, heading, description } }`)
 - `project-list.json` → Projects (array; fields `id`, `name`, `description`, `project-link`, `project-demo`, `tools` — `tools` is a comma-separated string parsed by `ProjectCard`)
