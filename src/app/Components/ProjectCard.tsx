@@ -2,6 +2,7 @@ import Image from 'next/image';
 import CustomChip from './CustomChip';
 import Link from "next/link";
 import { FiGithub, FiEye } from "react-icons/fi";
+import { contentUrl } from "@/lib/blob";
 
 interface ProjectCardProps {
   readonly title: string;
@@ -28,7 +29,7 @@ function ProjectCard({
           alt={`${title} project thumbnail`}
           height={200}
           width={356}
-          src="https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/project-placeholder.svg"
+          src={contentUrl("project-placeholder.svg")}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

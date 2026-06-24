@@ -12,7 +12,7 @@
  * already publicly cached in Vercel Blob.
  */
 
-const BLOB_BASE = "https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com";
+import { BLOB_BASE } from "./blob";
 
 // Revalidate the cached response at most once per hour. The data is static and
 // already publicly cached in Vercel Blob, so an aggressive cache is safe.

@@ -2,9 +2,8 @@
 
 import { Grid, Container, Box, Grow } from "@mui/material";
 import SkillCard from "../Components/SkillCard";
+import { BLOB_BASE } from "@/lib/blob";
 import type { SkillData } from "@/lib/content";
-
-const BLOB_BASE = "https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com";
 
 interface SkillsViewProps {
   readonly skills: SkillData;
