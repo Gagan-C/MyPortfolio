@@ -1,7 +1,6 @@
 "use client";
 
 import { Grid } from "@mui/material";
-import Link from "next/link";
 import Image from "next/image";
 import Socials from "./Components/Socials";
 import { contentUrl } from "@/lib/blob";
