@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaDiscord, FaGithub, FaKaggle, FaLinkedin, FaWordpress } from "react-icons/fa";
+import { FaCamera, FaDiscord, FaGithub, FaKaggle, FaLinkedin, FaWordpress } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Socials = () => {
@@ -58,6 +58,14 @@ const Socials = () => {
                           >
                             <FaWordpress size={20} />
                             <p className="text-sm flex flex-row pl-2">My Blog</p>
+                          </Link>
+                          <Link
+                            href={"https://photography.gaganchatu.com"}
+                            className="flex flex-row pl-2 p-1 hover:underline hover:dark:bg-gray-700 hover:bg-blue-100 rounded-md"
+                            target="_blank"
+                          >
+                            <FaCamera size={20} />
+                            <p className="text-sm flex flex-row pl-2">Photography</p>
                           </Link>
                         </div>);
 }
