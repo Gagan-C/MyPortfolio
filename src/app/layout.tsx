@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./Components/NavigationBar";
 import AnalyticsConsent from "./Components/AnalyticsConsent";
+import { contentUrl } from "@/lib/blob";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/profile-pic.png",
+        url: contentUrl("profile-pic.png"),
         width: 600,
         height: 600,
         alt: "Gagan Chatu's Profile Picture",
@@ -74,7 +75,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <div className="bg-[url(https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com/background-img.jpg)] bg-cover bg-scroll">
+      <div
+        className="bg-cover bg-scroll"
+        style={{ backgroundImage: `url("${contentUrl("background-img.jpg")}")` }}
+      >
           <div className="backdrop-blur-sm">
             <NavigationBar/>
             {children}

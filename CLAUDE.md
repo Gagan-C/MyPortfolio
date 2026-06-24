@@ -30,7 +30,7 @@ Pages are **Server Components** (App Router default). Each route's `page.tsx` is
 
 ### Data source: Vercel Blob (content is remote, not in-repo)
 
-All site content is fetched on the server from a **Vercel Blob store** (`BLOB_BASE` constant in `src/lib/content.ts`), hard-coded as the host `https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com` (also allow-listed in `next.config.js` image `remotePatterns`). There are no local data/JSON files — `src/lib/content.ts` exposes typed helpers that `fetch()` these blob URLs server-side with ISR caching (`next: { revalidate: 3600 }`):
+All site content is fetched on the server from a **Vercel Blob store**. The host is centralized in `src/lib/blob.ts` as `BLOB_BASE` (env-backed via `NEXT_PUBLIC_BLOB_BASE_URL`, falling back to `https://e21qb2sohxwlyxkx.public.blob.vercel-storage.com`); `contentUrl(path)` builds fully-qualified URLs from it. The host is also allow-listed as a literal in `next.config.js` image `remotePatterns` (and in the CSP `img-src`/`connect-src`). There are no local data/JSON files — `src/lib/content.ts` exposes typed helpers that `fetch()` these blob URLs server-side with ISR caching (`next: { revalidate: 3600 }`):
 
 - `aboutme.json` → Home (`{ body: { greeting, heading, description } }`)
 - `project-list.json` → Projects (array; fields `id`, `name`, `description`, `project-link`, `project-demo`, `tools` — `tools` is a comma-separated string parsed by `ProjectCard`)
