@@ -1,0 +1,7 @@
+# Responsive Headline Sizing
+
+This code demonstrates how to implement responsive headline sizing using Tailwind v4 utilities.
+
+## Usage
+
+To use this code, simply import the `HomePage` component and render it in your application.
